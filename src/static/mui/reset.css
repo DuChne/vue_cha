@@ -1,0 +1,344 @@
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+:root {
+    --ps: 750;
+    /*设计稿宽度*/
+    --fs: 100;
+    /*根字号*/
+}
+
+html {
+    color: #333;
+    width: 100%;
+    /* height: 100%; */
+    /* 禁用iPhone中Safari的字号自动调整 */
+    text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    /* 解决IOS默认滑动很卡的情况 */
+    -webkit-overflow-scrolling: touch;
+    -webkit-font-smoothing: antialiased;
+    font: calc(750px / var(--ps) * var(--fs))/1 \5FAE\8F6F\96C5\9ED1, arial, georgia;
+}
+
+@media (max-width: 750px) {
+    html {
+        font: calc(100vw / var(--ps) * var(--fs))/1 \5FAE\8F6F\96C5\9ED1, arial, georgia;
+    }
+}
+
+body {
+    width: 100%;
+    /* height: 100%; */
+    min-width: 320px;
+    overflow-x: hidden;
+    background-color: #fff;
+    position: relative;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+form,
+input,
+button,
+textarea,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+th,
+td {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* 取消链接高亮 */
+body,
+div,
+ul,
+li,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea,
+select,
+p,
+dl,
+dt,
+dd,
+a,
+img,
+button,
+form,
+table,
+th,
+tr,
+td,
+tbody,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* 移动端点击a链接出现蓝色背景问题解决 */
+a:link,
+a:active,
+a:visited,
+a:hover {
+    background: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+}
+
+header,
+nav,
+section,
+aside,
+article,
+footer {
+    display: block;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 0.32rem;
+    font-weight: normal;
+}
+
+p {
+    line-height: 1.5;
+    font-size: 12px;
+    text-align: justify;
+}
+
+a {
+    color: #333;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+
+sup {
+    vertical-align: text-top;
+}
+
+sub {
+    vertical-align: text-bottom;
+}
+
+mark {
+    color: #333;
+    display: inline-block;
+    background-color: transparent;
+}
+
+img,
+video {
+    display: block;
+}
+
+img {
+    border: none;
+    width: 100%;
+    height: auto;
+    width: auto\9;
+    /* ie8 */
+    -ms-interpolation-mode: bicubic;
+    /*为了照顾ie图片缩放失真*/
+}
+
+table {
+    table-layout: fixed;
+    border-spacing: 0px;
+    border-collapse: collapse;
+}
+
+table,
+th,
+td {
+    border: 1px solid #ccc;
+}
+
+label {
+    display: block;
+}
+
+input,
+select,
+button,
+textarea {
+    vertical-align: middle;
+    display: inline-block;
+    outline: none;
+    color: #333;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    font: 12px/1 \5FAE\8F6F\96C5\9ED1, arial, georgia;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #666666;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+    color: #666666;
+}
+
+input::-ms-input-placeholder,
+textarea::-ms-input-placeholder {
+    color: #666666;
+}
+
+/* ios按钮样式 */
+input[type=button],
+input[type=submit],
+input[type=file],
+button {
+    cursor: pointer;
+    outline: 0px;
+    -webkit-appearance: none;
+}
+
+
+/* 禁止缩放表单 */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input,
+button {
+    resize: none;
+    outline: none;
+}
+
+button,
+input[type="button"],
+input[type="submit"] {
+    cursor: pointer;
+}
+
+textarea {
+    resize: none;
+    line-height: 1.5;
+}
+
+
+/* 字体图标 */
+/* @font-face {
+    font-family: "iconfont";
+    src: url("../src/assets/font/iconfont.ttf");
+}
+
+i.icon {
+    font-style: normal;
+    vertical-align: top;
+    display: inline-block;
+    font-family: "iconfont" !important;
+} */
+
+/* 文字 */
+.text-overflow {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.text-more_line {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+
+/* 显示 */
+.display-none {
+    display: none;
+}
+
+.display-block {
+    display: block !important;
+}
+
+
+/* 布局 */
+.container,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.container-xl {
+    width: 100%;
+}
+
+.container-lg {
+    max-width: 1920px;
+}
+
+.container-md {
+    max-width: 1220px;
+}
+
+.container-sm {
+    max-width: 1000px;
+}
+
+.f-l {
+    float: left;
+}
+
+.f-r {
+    float: right;
+}
+
+.f-n {
+    float: none;
+}
+
+.clear::after {
+    content: "";
+    display: block;
+    clear: both;
+}
