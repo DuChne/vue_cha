@@ -41,3 +41,15 @@ export default new Router({
     {name:'zhan',path:'/home/zhan',component:Zhan}    
   ]
 })
+
+//导航路由
+// 使用router.beforeEach
+// router.beforeEach((to, from, next) => {
+//   // to and from are both route objects. must call `next`.
+//   if(to.path == '/about'){
+//     next();
+//   }else {
+//     let token=localStorage.getItem
+//   }
+// })
+

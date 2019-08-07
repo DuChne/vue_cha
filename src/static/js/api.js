@@ -1,7 +1,7 @@
 import { get , post } from "./http";
-// export const apiAddress = () => get('Api/getWap', {});
+export const apiAddress = p => get('Api/getWap',p);
+export const apiAp = a => post('Api/login', a);
+export const loging = a =>post('Api/login',a)
 
-// function  a(get) { 
-//     console.log(get)
-//  }
-//  a(get)
+
+// https://sz.goodtea.cc/index/Api/getWap
