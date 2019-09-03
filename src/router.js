@@ -4,6 +4,7 @@ import Home from './views/Home.vue'
 import Go from './views/go.vue'
 import Cat from './views/cat.vue'
 import Zhan from './views/children/zhan.vue'
+import Nei from './views/children/nei.vue'
 
 Vue.use(Router)
 
@@ -38,7 +39,8 @@ export default new Router({
       name: 'cat',
       component: Cat
     },
-    {name:'zhan',path:'/home/zhan',component:Zhan}    
+    {name:'zhan',path:'/home/zhan',component:Zhan},
+    {name:'nei',path:'/home/zhan/nei',component:Nei}
   ]
 })
 

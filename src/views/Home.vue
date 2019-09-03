@@ -42,7 +42,7 @@
 		        </ul> 
 		</div>
     <!-- <router-view></router-view> -->
-
+    <bar></bar>
   </div>
 </template>
 <script>
@@ -50,21 +50,27 @@
 import HelloWorld from '@/components/HelloWorld.vue'
 import { constants } from 'crypto';
 import Swiper from 'swiper' 
+import bar from '@/components/bar'
 // import Swiper from 'vue-swiper'; 
+// import {apiAddre} from '@static/js/api';
+import { apiA } from '@/static/js/newp';// 导入我们的api接口
+
 
 
 export default {
   name: 'home',
   
   components: {
-    HelloWorld
+    HelloWorld,
+    bar
   },
   data(){
     return {
       http:'https://sz.goodtea.cc/',
       arrImg:[]
     }
-  },
+  }
+  ,
   created(){
     this.$axios.get('Api/getWap')
     .then(res=>{
@@ -74,7 +80,9 @@ export default {
     })
     
     // console.log(this.$http)
+    // console.log('123')
   },
+  
   mounted(){
    new Swiper('.swiper-container', {
    autoplay:true,
@@ -86,9 +94,26 @@ export default {
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
-    },
+    }
   })
+    this.a()
+    this.b()
  },
+ methods: {
+    a(){
+      console.log('数据')
+      // let par={};
+      // apiAddre(par).then(res =>{
+      //   console.log(res)
+      // })
+    },
+    b(){
+      let par={};
+      apiA(par).then(res=>{
+        console.log(res)
+      })
+    }
+  },
   }
 </script>
 <style lang="scss" scoped>

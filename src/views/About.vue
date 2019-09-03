@@ -1,14 +1,19 @@
 <template>
   <div class="about">
     关于我们
+    <bar></bar>
   </div>
 </template>
 <script>
 import stort from 'vuex';
 import { loging } from '@/static/js/api';
+import bar from '@/components/bar'
 
 export default {
   name:'about',
+  components: {
+    bar
+  },
   data(){
     return {
 

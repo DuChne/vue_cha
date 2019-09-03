@@ -128,19 +128,17 @@ axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded
 */
 
 export function get (url,params){
-    console.log(axios.get)
-    console.log(params)
+    // console.log(axios.get)
+    // console.log(Qs.stringify(params))
     return new Promise((resolve,reject)=>{
-        axios.get(url,{
-            params:{}
-        }).then(res =>{
+        axios.get(url,{params}).then(res =>{
             // console.log(res.data)
             resolve(res.data);
-        }).catch(() => console.log('承诺抓住犯错'))
+        })
         
-        // .catch(err => {
-        //     reject(err.data)
-        // })
+        .catch(err => {
+            reject(err.data)
+        })
     })
 }
 /** 

@@ -307,6 +307,8 @@ a:active
     background-color: #efeff4;
 
     -webkit-overflow-scrolling: touch;
+    /* position: fixed;
+    bottom: 0; */
 }
 
 .mui-bar-nav ~ .mui-content
