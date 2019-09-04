@@ -13,6 +13,7 @@
       <!-- </router-link> -->
       {{http}}{{item.logo}}
     </div>
+    
   </div>
 </template>
 <script>

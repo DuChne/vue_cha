@@ -20,6 +20,8 @@
 				<span class="mui-tab-label">设置</span>
 			</router-link>
 		</nav> -->
+    	<!-- <img src="https://sz.goodtea.cc/uploads/20190628/3a8316ba9f78f3fc40e8aa688c342f55_1920_1200.jpg" preview="1" preview-text="你好">
+      <img src="https://sz.goodtea.cc/uploads/20190628/3a8316ba9f78f3fc40e8aa688c342f55_1920_1200.jpg" preview="1" preview-text="你好2"> -->
   </div>
 </template>
 

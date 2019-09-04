@@ -8,8 +8,28 @@
 import stort from 'vuex';
 import { loging } from '@/static/js/api';
 import bar from '@/components/bar'
+import Axios from 'axios';
 
 export default {
+  // // 组件内的路由导航守卫
+  // beforeRouteEnter(to, from, next) {
+  //   // 路由的名称，对应路由配置中的 name
+  //   const fromName = from.name
+
+  //   // 确认导航
+  //   next(vm => {
+  //     // 通过 vm 参数访问组件实例，已登录时，评估路由名称
+  //     if (vm.$s.state.auth) {
+  //       switch (fromName) {
+  //         // 如果从注册页面跳转过来
+  //         case 'Register':
+  //           // 显示注册成功
+  //           vm.showMsg('注册成功')
+  //           break
+  //       }
+  //     }
+  //   })
+  // },
   name:'about',
   components: {
     bar
